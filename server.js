@@ -20,8 +20,8 @@ app.use(express.json());
 app.use(logger('dev'));
 const oContacto =  new contacto({
     host: "localhost",
-    user: "ivanyvienen",
-    password: "30294686",
+    user: "root",
+    password: "",
     database: "contactos"
 });
 
@@ -34,12 +34,12 @@ app.post('/', (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: "ivanj.rodriguez.i21@gmail.com",
-            pass: "30294686virvlup"
+            user: "ivan30294686@gmail.com",
+            pass: "15161234"
         }
     })
     const mailOptions = {
-        from: 'ivanj.rodriguez.i21@gmail.com',
+        from: 'ivan30294686@gmail.com',
         to: req.body.email,
         subject: `Message from ${req.body.email}`,
         html: `
